@@ -24,7 +24,7 @@ document.querySelector('.check').addEventListener('click', function () {
     displayMessage('Great, Your Prediction is Accurate!', 'headline');
     document.querySelector('.number').textContent = secretNumber;
 
-    document.querySelector('body').style.backgroundColor = '#266e10';
+    document.querySelector('body').style.backgroundColor = '#0D98BA';
     document.querySelector('body').style.backgroundImage =
       'url(./assets/img/6k2.gif)';
     document.querySelector('.number').style.width = '30rem';
