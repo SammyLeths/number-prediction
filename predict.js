@@ -4,8 +4,10 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-const displayMessage = function (message) {
-  document.querySelector('.message').textContent = message;
+const defaultMessageClass = 'message';
+
+const displayMessage = function (message, messageClass) {
+  document.querySelector('.' + messageClass).textContent = message;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -14,15 +16,21 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // No input
   if (!guess) {
-    displayMessage('Enter a Number!');
+    displayMessage('Enter a Number!', defaultMessageClass);
 
     // Player wins
   } else if (guess === secretNumber) {
-    displayMessage('Correct Number!');
+    displayMessage('Correct Number!', defaultMessageClass);
+    displayMessage('Great, Your Prediction is Accurate!', 'headline');
     document.querySelector('.number').textContent = secretNumber;
 
     document.querySelector('body').style.backgroundColor = '#266e10';
+    document.querySelector('body').style.backgroundImage =
+      'url(./assets/img/6k2.gif)';
     document.querySelector('.number').style.width = '30rem';
+
+    document.querySelector('.guess').setAttribute('disabled', true);
+    document.querySelector('.check').setAttribute('disabled', true);
 
     if (score > highscore) {
       highscore = score;
@@ -32,11 +40,14 @@ document.querySelector('.check').addEventListener('click', function () {
     // Wrong prediction
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage(guess > secretNumber ? 'Too high!' : 'Too low!');
+      displayMessage(
+        guess > secretNumber ? 'Too high!' : 'Too low!',
+        defaultMessageClass
+      );
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      displayMessage('You lost the game!');
+      displayMessage('You lost the game!', defaultMessageClass);
       document.querySelector('.score').textContent = 0;
     }
   }
@@ -45,10 +56,17 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  displayMessage('Start predicting...');
+
+  displayMessage('Start predicting...', defaultMessageClass);
+  displayMessage('Predict My Number!', 'headline');
+
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#737376';
+  document.querySelector('body').style.backgroundImage = 'none';
   document.querySelector('.number').style.width = '15rem';
+
+  document.querySelector('.guess').removeAttribute('disabled');
+  document.querySelector('.check').removeAttribute('disabled');
 });
