@@ -17,7 +17,7 @@ After a successful guess, you can start the game all over with the 'Try again' b
 <h2>Links</h2>
 
 <ul>
-  <li>Demo: https://number-prediction.netlify.app/</li>
+  <li>Demo: <a href="https://number-prediction.netlify.app/" target="_blank">https://number-prediction.netlify.app/</a></li>
 </ul>
 
 <h2>Tech Stack</h2>
