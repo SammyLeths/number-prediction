@@ -50,3 +50,11 @@ After a successful guess, you can start the game all over with the 'Try again' b
     </ul>
   </li>
 </ul>
+
+<h2>Author's Links</h2>
+
+<ul>
+  <li>Portfolio - <a href="https://sammyleths.com" target="_blank">@SammyLeths</a></li>
+  <li>Linkedin - <a href="https://www.linkedin.com/in/eyiowuawi/" target="_blank">@SammyLeths</a></li>
+  <li>Twitter - <a href="https://twitter.com/SammyLeths" target="_blank">@SammyLeths</a></li>
+</ul>
