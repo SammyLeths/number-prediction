@@ -27,7 +27,6 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#0D98BA';
     document.querySelector('body').style.backgroundImage =
       'url(./assets/img/6k2.gif)';
-    document.querySelector('.number').style.width = '30rem';
 
     document.querySelector('.guess').setAttribute('disabled', true);
     document.querySelector('.check').setAttribute('disabled', true);
