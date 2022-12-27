@@ -49,6 +49,9 @@ After a successful guess, you can start the game all over with the 'Try again' b
       <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">W3SCHOOL</a>: JavaScript Introduction</li>
     </ul>
   </li>
+  <li>
+    <b><a href="https://mugshotbot.com/" target="_blank">MUGSHOTBOT</a></b>: Automatic beautiful link previews
+  </li>
 </ul>
 
 <h2>Author's Links</h2>
